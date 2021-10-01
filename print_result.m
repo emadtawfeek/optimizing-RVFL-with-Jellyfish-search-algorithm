@@ -18,14 +18,14 @@ function print_result(eval_result)
 %     prec=TP/(TP+FP);
 %     f1=2*(prec*recall)/(prec+recall);
     res = eval_result.train.confusion;
-    disp('- Confusion Matrix')
-    disp(reshape_cmat(eval_result.train.cmat))
+%     disp('- Confusion Matrix')
+%     disp(reshape_cmat(eval_result.train.cmat))
     fprintf('\n - Accuracy:  %.4f', res.Accuracy);
     fprintf('\n - Sensitivity:  %.4f', res.Sensitivity);
     fprintf('\n - Specitifity:  %.4f', res.Specificity);
-    fprintf('\n - Precision: %.4f', res.Precision);
+%     fprintf('\n - Precision: %.4f', res.Precision);
     fprintf('\n - False Positive Rate :  %.4f', res.FalsePositiveRate);
-    fprintf('\n - F1-score :  %.4f', res.F1_score);
+    fprintf('\n - F1-score :  %.4f \n' , res.F1_score);
 %     fprintf('\n - MRE:  %.4f', eval_result.train.mre);
 %     fprintf('\n - RMSE:  %.4f', eval_result.train.rmse);
 %     fprintf('\n - MAPRE:  %.4f', eval_result.train.mapre);
@@ -54,14 +54,14 @@ function print_result(eval_result)
 %             ', TN: ', num2str(TNt), ...
 %             ', FN: ', num2str(FNt)])
     res = eval_result.test.confusion;
-    disp(' - Confusion Matrix')
-    disp(reshape_cmat(eval_result.test.cmat))
+%     disp(' - Confusion Matrix')
+%     disp(reshape_cmat(eval_result.test.cmat))
     fprintf('\n - Accuracy:  %.4f', res.Accuracy);
     fprintf('\n - Sensitivity:  %.4f', res.Sensitivity);
     fprintf('\n - Specitifity:  %.4f', res.Specificity);
-    fprintf('\n - Precision: %.4f', res.Precision);
+%     fprintf('\n - Precision: %.4f', res.Precision);
     fprintf('\n - False Positive Rate :  %.4f', res.FalsePositiveRate);
-    fprintf('\n - F1-score :  %.4f', res.F1_score);
+    fprintf('\n - F1-score :  %.4f \n', res.F1_score);
 
 %     fprintf('\n - MRE:  %.4f', eval_result.test.mre);
 %     fprintf('\n - RMSE:  %.4f', eval_result.test.rmse);
